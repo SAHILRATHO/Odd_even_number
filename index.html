@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Check Odd or Even Number</h1>
+
+        <div class="text">
+            <label for="v1"> Enter A Number To Check If It`s Odd or Even</label><br> <br>
+            <input type="number" id="v1"><br> <br>
+
+        </div>
+
+        <div class="btn">
+            <input type="button" id="enter" value="Check" onclick="oddEven()">
+
+        </div>
+        <div class="text">
+            <p id="sum"></p>
+        </div>
+    </div>
+    <script>
+        function oddEven() {
+            var num1 = parseInt(document.getElementById("v1").value)
+
+            if (isNaN(num1)) {
+                document.getElementById("sum").innerHTML = `Enter a Valid Number`
+            } else {
+                if (num1 % 2 == 0) {
+                    // console.log(`${num1} is even`)
+                    document.getElementById("sum").innerHTML = `Tha Number: ${num1} Is Even`
+                }
+                else {
+                    document.getElementById("sum").innerHTML = `Tha Number: ${num1} Is Odd`
+                }
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
